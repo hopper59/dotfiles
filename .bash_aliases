@@ -5,7 +5,6 @@ alias bashReb='exec bash'
 alias zshReb='exec zsh'
 alias myshare='cd ~/shared'
 alias myproj='cd ~/Projects'
-alias mytodo='less ~/Documents/todo.txt'
 
 #datto
 alias dattous='ssh root@admin.dattobackup.com -i ~/ubun'
@@ -25,14 +24,9 @@ alias gc='git commit -v'
 alias gf='git fetch --all'
 alias updateMaster='git remote | grep -v kfrancis | tr -d "\n" | xargs -0 -I repo git checkout -B master repo/master'
 
-#tools
-alias decode64='php ~/Documents/base64.php d'
-alias encode64='php ~/Documents/base64.php e'
-
 alias clipper='gnome-screenshot -i'
 
 alias pycharm='~/pyCharm/bin/pycharm.sh&'
 alias phpstorm='/opt/PhpStorm/bin/phpstorm.sh&'
 
-alias notes='vi ~/shared/notes.txt'
 
