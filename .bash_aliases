@@ -6,15 +6,6 @@ alias zshReb='exec zsh'
 alias myshare='cd ~/shared'
 alias myproj='cd ~/Projects'
 
-#datto
-alias dattous='ssh root@admin.dattobackup.com -i ~/ubun'
-alias ftpdatto='sftp -i ~/ubun root@admin.dattobackup.com'
-alias dattoca='ssh root@admin.dattobackup.ca -i ~/ubun'
-
-#test webserver
-alias testWeb='ssh root@admin.kfrancis.us.dev'
-alias testSftp='sftp root@admin.kfrancis.us.dev'
-
 #git things
 alias gs='git status'
 alias gb='git branch'
