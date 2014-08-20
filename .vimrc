@@ -68,5 +68,8 @@ set tw=500
 set tabstop=4 
 set shiftwidth=4
 
+"highlight lines 81-120 to show psr-2 limit
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+let &colorcolumn=join(range(81,120),",")
 
 set syn=php
