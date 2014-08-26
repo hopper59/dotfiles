@@ -1,4 +1,6 @@
 "sets a buffer for the tops and bottoms of the screen,
+syntax on
+colorscheme mirodark
 "so when you are scrolling off the bottom or top you
 "have a little context
 set so=7
@@ -68,8 +70,12 @@ set tw=500
 set tabstop=4 
 set shiftwidth=4
 
-"highlight lines 81-120 to show psr-2 limit
+"show a line at 80 char
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 let &colorcolumn=join(range(81,120),",")
 
-set syn=php
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
