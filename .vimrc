@@ -79,3 +79,6 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+"my key mappings
+"swap ab => ba
+map <F2> xph

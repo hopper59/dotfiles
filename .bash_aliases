@@ -5,6 +5,7 @@ alias bashReb='exec bash'
 alias zshReb='exec zsh'
 alias myshare='cd ~/shared'
 alias myproj='cd ~/Projects'
+alias mytodo='less ~/Documents/todo.txt'
 
 #git things
 alias gs='git status'
@@ -12,12 +13,12 @@ alias gb='git branch'
 alias gr='git remote -v'
 alias gl='git log --graph --decorate=short'
 alias gc='git commit -v'
-alias gf='git fetch --all'
-alias updateMaster='git remote | grep -v kfrancis | tr -d "\n" | xargs -0 -I repo git checkout -B master repo/master'
+alias updateMaster='~/.bash_scripts/selectMaster.sh'
+alias gf='~/.bash_scripts/fetchRepo.sh'
+alias fetchRemotes='~/.bash_scripts/fetchRemote.sh'
 
 alias clipper='gnome-screenshot -i'
 
 alias pycharm='~/pyCharm/bin/pycharm.sh&'
 alias phpstorm='/opt/PhpStorm/bin/phpstorm.sh&'
-
 
