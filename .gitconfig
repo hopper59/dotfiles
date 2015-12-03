@@ -1,0 +1,9 @@
+[user]
+	name = kfrancis
+[alias]
+    ci = commit
+    co = checkout
+    stn = status --untracked=no
+	cb = checkout -b
+[core]
+	editor = vi
