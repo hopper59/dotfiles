@@ -6,6 +6,7 @@ alias zshReb='exec zsh'
 alias myshare='cd ~/shared'
 alias myproj='cd ~/Projects'
 alias mytodo='less ~/Documents/todo.txt'
+alias ctrlPanel='unity-control-center'
 
 #git things
 alias gs='git status'
@@ -20,5 +21,7 @@ alias fetchRemotes='~/.bash_scripts/fetchRemote.sh'
 alias clipper='gnome-screenshot -i'
 
 alias pycharm='~/pyCharm/bin/pycharm.sh&'
-alias phpstorm='/opt/PhpStorm/bin/phpstorm.sh&'
+alias phpstorm='~/PhpStorm/bin/phpstorm.sh&'
+
+alias notes='vi ~/shared/notes.txt'
 

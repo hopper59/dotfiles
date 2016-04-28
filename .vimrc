@@ -60,15 +60,14 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+"set shiftwidth=3
+"set tabstop=3
+autocmd FileType * setlocal tabstop=4 shiftwidth=4
+autocmd Filetype yaml setlocal tabstop=3 shiftwidth=3
 
 " Linebreak on 500 characters
 set lbr
 set tw=500
-
-set tabstop=4 
-set shiftwidth=4
 
 "show a line at 80 char
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
@@ -82,3 +81,17 @@ endif
 "my key mappings
 "swap ab => ba
 map <F2> xph
+
+if &term =~ '256color'
+    " disable Background Colot Erase (BCE)
+    set t_ut=
+endif
+
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.php :call DeleteTrailingWS()
+
+" set runtimepath^=~/.vim/bundle/vim-symfony/plugin/

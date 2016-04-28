@@ -57,4 +57,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+PATH="$PATH:$HOME/.bash_scripts"
+
+setopt INTERACTIVE_COMMENTS
 
