@@ -2,13 +2,20 @@
 export TERM="xterm-256color"
 
 autoload -U colors
+autoload -Uz vcs_info
 colors
+
+zstyle ':vcs_info:*' enable git
+precmd() {
+    vcs_info
+}
+setopt prompt_subst
 
 #autoload -Uz promptinit
 #promptinit
 #prompt elite 
-PROMPT="%{$fg[green]%}┌%n@%m '%1d' [%j]
-└>%{$reset_color%} "
+PROMPT='%{$fg[green]%}┌%n@%m '%1d' [%j] ${vcs_info_msg_0_}%
+└>%{$reset_color%} '
 RPROMPT=""
 
 setopt histignorealldups sharehistory
@@ -24,6 +31,11 @@ HISTFILE=~/.zsh_history
 # Use modern completion system
 autoload -Uz compinit
 compinit
+
+#version control formatting
+zstyle ':vcs_info:git*' formats '(%b)'
+zstyle ':vcs_info:git*' actionformats '(%b)'
+zstyle ':vcs_info:git*' branchformats '(%b)'
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -47,17 +59,17 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+if [ -d ~/.scripts ]; then
+    #source {path to file to include}
+fi
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-PATH="$PATH:$HOME/.bash_scripts"
-
 setopt INTERACTIVE_COMMENTS
-
