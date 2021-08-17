@@ -63,11 +63,11 @@ set smarttab
 "set shiftwidth=3
 "set tabstop=3
 autocmd FileType * setlocal tabstop=4 shiftwidth=4
-autocmd Filetype yaml setlocal tabstop=3 shiftwidth=3
+autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2
 
 " Linebreak on 500 characters
-set lbr
-set tw=500
+" set lbr
+" set tw=500
 
 "show a line at 80 char
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
@@ -94,4 +94,3 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.php :call DeleteTrailingWS()
 
-" set runtimepath^=~/.vim/bundle/vim-symfony/plugin/
