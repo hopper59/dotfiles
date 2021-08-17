@@ -14,14 +14,13 @@ alias gb='git branch'
 alias gr='git remote -v'
 alias gl='git log --graph --decorate=short'
 alias gc='git commit -v'
-alias updateMaster='~/.bash_scripts/selectMaster.sh'
-alias gf='~/.bash_scripts/fetchRepo.sh'
-alias fetchRemotes='~/.bash_scripts/fetchRemote.sh'
+alias gf='git fetch --all'
+alias gca='git commit --amend -v'
 
 alias clipper='gnome-screenshot -i'
 
-alias pycharm='~/pyCharm/bin/pycharm.sh&'
-alias phpstorm='~/PhpStorm/bin/phpstorm.sh&'
+alias usKeyboard='setxkbmap -layout us'
+alias clearMemcache="echo 'flush_all' | nc localhost 11211"
 
-alias notes='vi ~/shared/notes.txt'
-
+alias wifioff='sudo nmcli radio wifi off'
+alias wifion='sudo nmcli radio wifi on'
