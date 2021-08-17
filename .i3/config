@@ -52,14 +52,15 @@ bindsym $mod+Shift+Right move right
 
 #lock setttings
 bindsym $mod+x mode "$mode_system"
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
+#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (x) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend
 mode "$mode_system" {
     bindsym l exec --no-startup-id ~/.i3/i3exit lock, mode "default"
     bindsym e exec --no-startup-id ~/.i3/i3exit logout, mode "default"
     bindsym s exec --no-startup-id ~/.i3/i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id ~/.i3/i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id ~/.i3/i3exit reboot, mode "default"
-    bindsym x exec --no-startup-id ~/.i3/i3exit shutdown, mode "default"
+    #bindsym h exec --no-startup-id ~/.i3/i3exit hibernate, mode "default"
+    #bindsym r exec --no-startup-id ~/.i3/i3exit reboot, mode "default"
+    #bindsym x exec --no-startup-id ~/.i3/i3exit shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -103,6 +104,10 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+
+# uk keyboard layout support
+bindsym $mod+Shift+quotedbl move container to workspace 2
+bindsym $mod+Shift+sterling move container to workspace
 
 # move focused container to workspace
 bindsym $mod+Shift+exclam move container to workspace 1
@@ -155,5 +160,6 @@ bar {
         status_command i3status
 }
 
-exec ./home/kim/.screenlayout/layout.sh
+#add extra exec for arand layout execution on login
+#exec ./home/kim/.screenlayout/layout.sh
 
